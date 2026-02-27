@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+from datetime import date
 import joblib
 import pandas as pd
 import streamlit as st
@@ -148,7 +149,12 @@ def main():
     max_date = data_clean["date"].max().date()
 
     if "range_start" not in st.session_state:
-        st.session_state.range_start = min_date
+        lower_bound = max(min_date, date(2024, 1, 1))
+        default_start = (data_clean["date"].max() - pd.DateOffset(years=1)).date()
+        default_start = max(default_start, lower_bound)
+        if default_start > max_date:
+            default_start = min_date
+        st.session_state.range_start = default_start
     if "range_end" not in st.session_state:
         st.session_state.range_end = max_date
 
