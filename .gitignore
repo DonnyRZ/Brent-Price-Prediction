@@ -216,3 +216,7 @@ data/processed/
 
 # ! Exception: Do not ignore README.md files (Keep folder structure)
 !data/**/README.md
+
+# Allow the processed dataset required by the Streamlit app
+!data/processed/
+!data/processed/merged_oil_prices.csv
