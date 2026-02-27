@@ -1,0 +1,53 @@
+{
+  "model": "nn",
+  "feature_cols": [
+    "close_x",
+    "open_x",
+    "high_x",
+    "low_x",
+    "average_x",
+    "brent_lag_1",
+    "brent_lag_3",
+    "brent_lag_5",
+    "brent_lag_7",
+    "brent_ma_5",
+    "brent_ma_10",
+    "close_y",
+    "open_y",
+    "high_y",
+    "low_y",
+    "average_y",
+    "wti_lag_1",
+    "wti_lag_3",
+    "wti_lag_5",
+    "wti_lag_7",
+    "wti_ma_5",
+    "wti_ma_10"
+  ],
+  "split_sizes": {
+    "train": 1285,
+    "val": 275,
+    "test": 276
+  },
+  "metrics": {
+    "train": {
+      "MSE": 0.754407072002255,
+      "RMSE": 0.8685661011127794,
+      "MAE": 0.6252488688776374,
+      "R2": 0.9903293898366899
+    },
+    "val": {
+      "MSE": 1.3196095224896682,
+      "RMSE": 1.1487425832142153,
+      "MAE": 0.8929806820407418,
+      "R2": 0.8778346919165807
+    },
+    "test": {
+      "MSE": 1.6265722869098773,
+      "RMSE": 1.2753714309603603,
+      "MAE": 0.9864077019077556,
+      "R2": 0.8545340977529191
+    }
+  },
+  "trained_at": "2026-02-27T03:45:33.054161+00:00"
+}

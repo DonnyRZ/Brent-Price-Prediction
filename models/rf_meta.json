@@ -1,0 +1,56 @@
+{
+  "model": "rf",
+  "feature_cols": [
+    "brent_close_lag_1",
+    "brent_close_lag_3",
+    "brent_close_lag_5",
+    "brent_close_lag_7",
+    "wti_close_lag_1",
+    "wti_close_lag_3",
+    "wti_close_lag_5",
+    "wti_close_lag_7",
+    "brent_volume_lag_1",
+    "brent_volume_lag_3",
+    "brent_volume_lag_5",
+    "brent_volume_lag_7",
+    "brent_close_ma_5",
+    "brent_close_ma_10",
+    "wti_close_ma_5",
+    "wti_close_ma_10",
+    "brent_high_low_diff",
+    "wti_high_low_diff",
+    "brent_open_close_diff",
+    "brent_wti_spread",
+    "open_x",
+    "high_x",
+    "low_x",
+    "close_x",
+    "volume_x",
+    "average_x",
+    "open_y",
+    "high_y",
+    "low_y",
+    "close_y",
+    "volume_y",
+    "average_y"
+  ],
+  "split_sizes": {
+    "train": 1468,
+    "test": 368
+  },
+  "metrics": {
+    "train": {
+      "MSE": 0.09199469919618539,
+      "RMSE": 0.30330627951986977,
+      "MAE": 0.21877629427792794,
+      "R2": 0.9989494743403423
+    },
+    "test": {
+      "MSE": 1.1128594114945694,
+      "RMSE": 1.0549215191162655,
+      "MAE": 0.8200355978260885,
+      "R2": 0.8853032794885254
+    }
+  },
+  "trained_at": "2026-02-27T03:45:32.236630+00:00"
+}
